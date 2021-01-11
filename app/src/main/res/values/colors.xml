@@ -23,5 +23,9 @@
     <color name="colorTret">#DC2C2C</color>
     <color name="colorFon">#D0D5BB</color>
 
+    <color name="my_green">#12c700</color>
+    <color name="my_red">#e54304</color>
+    <color name="my_yellow">#ffc107</color>
+
 
 </resources>
