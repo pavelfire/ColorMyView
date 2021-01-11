@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_wide">16dp</dimen>
+    <dimen name="margin_half">8dp</dimen>
+    <dimen name="box_text_size">24sp</dimen>
+
+    <dimen name="imt_visual">12sp</dimen>
+
+    <item name="main_desc_mult" type="dimen" format="float">1.2</item>
+</resources>
