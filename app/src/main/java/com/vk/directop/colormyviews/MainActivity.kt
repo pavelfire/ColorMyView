@@ -17,20 +17,27 @@ class MainActivity : AppCompatActivity() {
         //binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         setListeners()
+
+        //this code prints cake in console
+        val age = 38
+        val layers = 5
+        printCakeCandles(age)
+        printCakeTop(age)
+        printCakeBottom(age, layers)
     }
 
-    private fun setListeners(){
+    private fun setListeners() {
         val clickableViews: List<View> =
                 listOf(box_one_text, box_two_text, box_three_text, box_four_text, box_five_text,
                         constraint_layout, red_button, yellow_button, green_button)
 
-        for (item in clickableViews){
+        for (item in clickableViews) {
             item.setOnClickListener { makeColored(it) }
         }
     }
 
-    private fun makeColored(view: View){
-        when(view.id){
+    private fun makeColored(view: View) {
+        when (view.id) {
             //Boxes using Colo class colors for background
             R.id.box_one_text -> view.setBackgroundColor(Color.DKGRAY)
             R.id.box_two_text -> view.setBackgroundColor(Color.GRAY)
@@ -47,5 +54,37 @@ class MainActivity : AppCompatActivity() {
 
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
+    }
+
+
+    fun printCakeCandles(age: Int) {
+        print(" ")
+        repeat(age) {
+            print(",")
+        }
+        println("")
+        print(" ")
+        repeat(age) {
+            print("|")
+        }
+        println()
+    }
+
+    fun printCakeTop(age: Int) {
+        repeat(age + 2) {
+            print("=")
+        }
+        println()
+    }
+
+
+    fun printCakeBottom(age: Int, layers: Int) {
+        repeat(layers) {
+            repeat(age + 2) {
+                print("@")
+            }
+            println()
+        }
+
     }
 }
